@@ -21,9 +21,8 @@ cargo install typst-cli # If you have Rust installed
 
 ## 🛠️ Installation
 
-    Clone this repository or download the script directly.
-
-    Make the script executable:
+Clone this repository or download the script directly.
+Make the script executable:
 
 ```bash
 chmod +x convert_simple.sh
@@ -33,11 +32,11 @@ chmod +x convert_simple.sh
 
 The script requires exactly three arguments:
 
-    Source File: The absolute path to your .odt or .docx file.
+Source File: The absolute path to your .odt or .docx file.
 
-    Output Directory: The absolute path to the folder where you want the project saved.
+Output Directory: The absolute path to the folder where you want the project saved.
 
-    Format: typ (for Typst) or tex (for LaTeX).
+Format: typ (for Typst) or tex (for LaTeX).
 
 Command Syntax:
 ```bash
@@ -51,16 +50,16 @@ Example:
 ```
 What the script does automatically:
 
-    Creates a dedicated project folder named after your document in the target directory.
+Creates a dedicated project folder named after your document in the target directory.
 
-    Moves into that directory to enforce relative paths for all media.
+Moves into that directory to enforce relative paths for all media.
 
-    Runs Pandoc to convert the text and extracts all embedded images into a local media/ subfolder.
+Runs Pandoc to convert the text and extracts all embedded images into a local media/ subfolder.
 
-    Leaves you with a clean, instantly compilable .typ or .tex file.
+Leaves you with a clean, instantly compilable .typ or .tex file.
 
-⚠️ Known Limitations
+## ⚠️ Known Limitations
 
-    PDF Inputs: Pandoc cannot convert from PDFs. If you have a PDF, you must first convert it to a .docx file (e.g., using Word, Adobe, or Mathpix for complex formulas) before running this script.
+PDF Inputs: Pandoc cannot convert from PDFs. If you have a PDF, you must first convert it to a .docx file (e.g., using Word, Adobe, or Mathpix for complex formulas) before running this script.
 
-    Complex ODT Objects: Native LibreOffice drawing objects or embedded charts in .odt files may not extract perfectly. Saving the file as .docx before running the script usually resolves this.
+Complex ODT Objects: Native LibreOffice drawing objects or embedded charts in .odt files may not extract perfectly. Saving the file as .docx before running the script usually resolves this.
